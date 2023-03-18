@@ -1,0 +1,15 @@
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/bin/Debug/net7.0/Pong
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/bin/Debug/net7.0/Pong.deps.json
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/bin/Debug/net7.0/Pong.runtimeconfig.json
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/bin/Debug/net7.0/Pong.dll
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/bin/Debug/net7.0/Pong.pdb
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/Debug/net7.0/Pong.csproj.AssemblyReference.cache
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/Debug/net7.0/Pong.GeneratedMSBuildEditorConfig.editorconfig
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/Debug/net7.0/Pong.AssemblyInfoInputs.cache
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/Debug/net7.0/Pong.AssemblyInfo.cs
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/Debug/net7.0/Pong.csproj.CoreCompileInputs.cache
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/Debug/net7.0/Pong.dll
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/Debug/net7.0/refint/Pong.dll
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/Debug/net7.0/Pong.pdb
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/Debug/net7.0/Pong.genruntimeconfig.cache
+/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/Debug/net7.0/ref/Pong.dll
