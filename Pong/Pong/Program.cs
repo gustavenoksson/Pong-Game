@@ -6,3 +6,7 @@
 var PlayingField = new PlayingField();
 
 PlayingField.DrawField();
+
+var Padel = new Padel();
+
+Padel.DrawPadel();
