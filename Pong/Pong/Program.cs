@@ -3,19 +3,24 @@
 //Console.WriteLine(Console.WindowWidth);
 //Console.WriteLine(Console.WindowHeight);
 
-while (true) {
 var PlayingField = new PlayingField();
 
 PlayingField.DrawField();
 
-var Padel = new Padel();
+var padel1StartPoint = new Point(7, 6);
+var padel2StartPoint = new Point(83, 6);
 
-//Padel.DrawPadel();
+var Padel1 = new Padel(padel1StartPoint);
+var Padel2 = new Padel(padel2StartPoint);
 
-var key = Console.ReadKey(true).Key;
+Padel1.DrawPadel();
+Padel2.DrawPadel();
 
-if (key == ConsoleKey.W)
+while (true)
 {
-    Padel.MoveUp();
-}
+    var key = Console.ReadKey(true).Key;
+    if (key == ConsoleKey.W)
+    {
+       Padel1.MoveUp();
+    }
 }

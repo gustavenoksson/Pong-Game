@@ -3,31 +3,29 @@ namespace Pong
 {
 	public class Padel
 	{
-        public int point = 6;
+        Point Point;
 
-		public Padel()
+		public Padel(Point point)
 		{
+            Point = point;
 		}
 
-		public void DrawPadel(int point)
+		public void DrawPadel()
 		{
-            for (int i = point; i < point + 2; i++)
+            for (int i = Point.Y; i < Point.Y + 2; i++)
             {
-                Console.SetCursorPosition(7, i);
-                Console.WriteLine('|');
-            }
-
-            for (int i = point; i < point + 2; i++)
-            {
-                Console.SetCursorPosition(83, i);
+                Console.SetCursorPosition(Point.X, i);
                 Console.WriteLine('|');
             }
         }
 
         public void MoveUp()
         {
-            point++;
-            DrawPadel(point);
+            Point.Y--;
+            Console.Write(Point.Y);
+            Console.SetCursorPosition(Point.X, Point.Y);
+            Console.WriteLine('|');
+
         }
 	}
 }
