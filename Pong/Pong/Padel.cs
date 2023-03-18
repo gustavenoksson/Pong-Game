@@ -12,6 +12,8 @@ namespace Pong
 
 		public void DrawPadel()
 		{
+
+
             for (int i = Point.Y; i < Point.Y + 2; i++)
             {
                 Console.SetCursorPosition(Point.X, i);
@@ -21,6 +23,12 @@ namespace Pong
 
         public void MoveUp()
         {
+
+            for (int i = 1; i < 13; i++)
+            {
+                Console.SetCursorPosition(7, i);
+                Console.WriteLine(" ");
+            }
             Point.Y--;
             Console.Write(Point.Y);
             Console.SetCursorPosition(Point.X, Point.Y);
