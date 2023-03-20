@@ -30,11 +30,28 @@ namespace Pong
                 Console.WriteLine(" ");
             }
             Point.Y--;
-            Console.Write(Point.Y);
-            Console.SetCursorPosition(Point.X, Point.Y);
-            Console.WriteLine('|');
-
+            for (int i = Point.Y; i < Point.Y + 2; i++)
+            {
+                Console.SetCursorPosition(Point.X, i);
+                Console.WriteLine('|');
+            }
         }
-	}
+
+        public void MoveDown()
+        {
+
+            for (int i = 1; i < 13; i++)
+            {
+                Console.SetCursorPosition(7, i);
+                Console.WriteLine(" ");
+            }
+            Point.Y++;
+            for (int i = Point.Y; i < Point.Y + 2; i++)
+            {
+                Console.SetCursorPosition(Point.X, i);
+                Console.WriteLine('|');
+            }
+        }
+    }
 }
 
