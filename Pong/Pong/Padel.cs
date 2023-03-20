@@ -27,7 +27,7 @@ namespace Pong
             {
                 for (int i = 1; i < 13; i++)
                 {
-                    Console.SetCursorPosition(7, i);
+                    Console.SetCursorPosition(Point.X, i);
                     Console.WriteLine(" ");
                 }
                 Point.Y--;
@@ -47,7 +47,7 @@ namespace Pong
             {
                 for (int i = 1; i < 13; i++)
                 {
-                    Console.SetCursorPosition(7, i);
+                    Console.SetCursorPosition(Point.X, i);
                     Console.WriteLine(" ");
                 }
                 Point.Y++;

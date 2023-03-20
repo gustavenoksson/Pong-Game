@@ -28,4 +28,14 @@ while (true)
     {
         Padel1.MoveDown();
     }
+
+    else if(key == ConsoleKey.UpArrow)
+    {
+        Padel2.MoveUp();
+    }
+
+    else if (key == ConsoleKey.DownArrow)
+    {
+        Padel2.MoveDown();
+    }
 }
