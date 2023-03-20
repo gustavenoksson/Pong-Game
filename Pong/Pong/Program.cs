@@ -18,14 +18,13 @@ Padel2.DrawPadel();
 
 while (true)
 {
-    var playerOneUpKey = Console.ReadKey(true).Key;
-    if (playerOneUpKey == ConsoleKey.W)
+    var key = Console.ReadKey(true).Key;
+    if (key == ConsoleKey.W)
     {
        Padel1.MoveUp();
     }
 
-    var playerOneDownKey = Console.ReadKey(true).Key;
-    if (playerOneDownKey == ConsoleKey.S)
+    else if (key == ConsoleKey.S)
     {
         Padel1.MoveDown();
     }
