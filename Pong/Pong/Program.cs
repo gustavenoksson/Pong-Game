@@ -1,4 +1,5 @@
 ﻿using Pong;
+using System.Timers;
 
 var PlayingField = new PlayingField();
 
@@ -15,6 +16,8 @@ var Ball = new Ball(ballStartingPoint);
 Padel1.DrawPadel();
 Padel2.DrawPadel();
 Ball.DrawBall();
+
+
 
 while (true)
 {

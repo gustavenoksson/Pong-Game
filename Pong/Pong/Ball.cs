@@ -18,8 +18,15 @@ namespace Pong
             Console.WriteLine('◉');
         }
 
+        private void ClearBall()
+        {
+            Console.SetCursorPosition(Point.X, Point.Y);
+            Console.WriteLine(' ');
+        }
+
         public void Move(Padel padel1, Padel padel2)
         {
+            ClearBall();
             if (Direction == "left")
             {
                 Point.X--;
