@@ -4,17 +4,21 @@ namespace Pong
 	public class Padel
 	{
         public Point Point;
+        public Side Side;
 
-		public Padel(Point point)
+
+		public Padel(Point point, Side side)
 		{
             Point = point;
+            Side = side;
+
 		}
 
 		public void DrawPadel()
 		{
             for (int i = Point.Y; i < Point.Y + 2; i++)
             {
-                Console.SetCursorPosition(Point.X, i);
+                Console.SetCursorPosition(Point.X + Side.Placement, i);
                 Console.WriteLine('|');
             }
         }
@@ -38,12 +42,12 @@ namespace Pong
                 DrawPadel();
             }
         }
-
+        
         private void ClearBoard()
         {
             for (int i = 1; i < 13; i++)
             {
-                Console.SetCursorPosition(Point.X, i);
+                Console.SetCursorPosition(Point.X + Side.Placement, i);
                 Console.WriteLine(" ");
             }
         }
