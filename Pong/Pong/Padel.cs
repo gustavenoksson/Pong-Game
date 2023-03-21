@@ -3,7 +3,7 @@ namespace Pong
 {
 	public class Padel
 	{
-        Point Point;
+        public Point Point;
 
 		public Padel(Point point)
 		{
@@ -12,8 +12,6 @@ namespace Pong
 
 		public void DrawPadel()
 		{
-            
-
             for (int i = Point.Y; i < Point.Y + 2; i++)
             {
                 Console.SetCursorPosition(Point.X, i);
@@ -25,39 +23,29 @@ namespace Pong
         {
             if (Point.Y > 1)
             {
-                for (int i = 1; i < 13; i++)
-                {
-                    Console.SetCursorPosition(Point.X, i);
-                    Console.WriteLine(" ");
-                }
                 Point.Y--;
-                for (int i = Point.Y; i < Point.Y + 2; i++)
-                {
-                    Console.SetCursorPosition(Point.X, i);
-                    Console.WriteLine('|');
-                }
-
+                ClearBoard();
+                DrawPadel();
             }
-
         }
 
         public void MoveDown()
         {
             if (Point.Y < 11)
             {
-                for (int i = 1; i < 13; i++)
-                {
-                    Console.SetCursorPosition(Point.X, i);
-                    Console.WriteLine(" ");
-                }
                 Point.Y++;
-                for (int i = Point.Y; i < Point.Y + 2; i++)
-                {
-                    Console.SetCursorPosition(Point.X, i);
-                    Console.WriteLine('|');
-                }
+                ClearBoard();
+                DrawPadel();
             }
-            
+        }
+
+        private void ClearBoard()
+        {
+            for (int i = 1; i < 13; i++)
+            {
+                Console.SetCursorPosition(Point.X, i);
+                Console.WriteLine(" ");
+            }
         }
     }
 }

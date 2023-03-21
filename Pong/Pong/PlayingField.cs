@@ -29,7 +29,7 @@ namespace Pong
             }
 			for (int i = 0; i < height; i++)
 			{
-                Console.SetCursorPosition(85, i);
+                Console.SetCursorPosition(width, i);
                 Console.WriteLine('*');
             }
 		}
