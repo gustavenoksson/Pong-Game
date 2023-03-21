@@ -13,8 +13,7 @@ namespace Pong
         }
 
         public void DrawBall()
-        {
-            Console.SetCursorPosition(Point.X, Point.Y);
+        {            Console.SetCursorPosition(Point.X, Point.Y);
             Console.WriteLine('◉');
         }
 
@@ -29,10 +28,12 @@ namespace Pong
             ClearBall();
             if (Direction == "left")
             {
+                Point.Y++;
                 Point.X--;
                 CheckPadelCollision(padel1);
             } else if (Direction == "right")
             {
+                Point.Y++;
                 Point.X++;
                 CheckPadelCollision(padel2);
             }
