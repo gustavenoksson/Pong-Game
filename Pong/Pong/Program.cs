@@ -19,13 +19,19 @@ Padel1.DrawPadel();
 Padel2.DrawPadel();
 Ball.DrawBall();
 
-
+Task.Run(() =>
+{
+    while (true)
+    {
+        Ball.Move(Padel1, Padel2);
+        Thread.Sleep(20);
+    }
+});
 
 while (true)
 {
-    Ball.Move(Padel1, Padel2);
     var key = Console.ReadKey(true).Key;
-    switch (key) { 
+    switch (key) {
         case ConsoleKey.W:
             Padel1.MoveUp();
             break;
