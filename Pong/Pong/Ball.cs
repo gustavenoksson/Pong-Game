@@ -31,20 +31,18 @@ namespace Pong
         public void Move(Padel padel1, Padel padel2)
         {
             ClearBall();
+            Bounce();
+
             if (Direction == "left")
-            {
-                Bounce();
+            {  
                 Point.X--;
                 CheckPadelCollision(padel1);
-
-
             } else if (Direction == "right")
             {
-
-                Bounce();
                 Point.X++;
                 CheckPadelCollision(padel2);
             }
+
             DrawBall();
         }
 
@@ -70,6 +68,23 @@ namespace Pong
 
             }
             Point.Y = Point.Y + Angle;
+        }
+
+        public bool checkForGoal()
+        {
+            if(Point.X < 8)
+            {
+                
+                
+                Console.SetCursorPosition(39, 6);
+                Console.Write("player 2 score");
+                return true;
+            }
+            else
+            {
+                
+                return false;
+            }
         }
 	}
 }

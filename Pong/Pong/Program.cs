@@ -21,12 +21,17 @@ Padel1.DrawPadel();
 Padel2.DrawPadel();
 Ball.DrawBall();
 
+
 Task.Run(() =>
 {
     while (true)
     {
         Ball.Move(Padel1, Padel2);
         Thread.Sleep(100);
+        if(Ball.checkForGoal())
+        {
+            continue;
+        }
     }
 });
 
@@ -46,5 +51,9 @@ while (true)
         case ConsoleKey.DownArrow:
             Padel2.MoveDown();
             break;
+    }
+    if (Ball.checkForGoal())
+    {
+        continue;
     }
 }
