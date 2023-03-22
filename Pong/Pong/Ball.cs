@@ -33,31 +33,15 @@ namespace Pong
             ClearBall();
             if (Direction == "left")
             {
-                if (Point.Y == 1 || Point.Y == 12)
-                {
-                    Angle *= -1;
-
-                    Point.Y = Point.Y + Angle;
-                    Point.X--;
-                    CheckPadelCollision(padel1);
-                }
-                Point.Y = Point.Y + Angle;
+                Bounce();
                 Point.X--;
                 CheckPadelCollision(padel1);
 
 
             } else if (Direction == "right")
             {
-                if (Point.Y == 1 || Point.Y == 12)
-                {
-                    Angle *= -1;
 
-                    Point.Y = Point.Y + Angle;
-                    Point.X++;
-                    CheckPadelCollision(padel2);
-                }
-
-                Point.Y = Point.Y + Angle;
+                Bounce();
                 Point.X++;
                 CheckPadelCollision(padel2);
             }
@@ -76,6 +60,16 @@ namespace Pong
                     Direction = "left";
                 }
             }
+        }
+
+        private void Bounce()
+        {
+            if (Point.Y == 1 || Point.Y == 12)
+            {
+                Angle *= -1;
+
+            }
+            Point.Y = Point.Y + Angle;
         }
 	}
 }
