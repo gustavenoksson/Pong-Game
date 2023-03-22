@@ -5,16 +5,22 @@ namespace Pong
 	{
         Point Point;
         string Direction;
+        Koef K;
 
-        public Ball(Point point)
+        public Ball(Point point, Koef k)
 		{
             Point = point;
             Direction = "left";
+            K = k;
+
+
         }
 
         public void DrawBall()
-        {            Console.SetCursorPosition(Point.X, Point.Y);
-            Console.WriteLine('◉');
+        {
+                Console.SetCursorPosition(Point.X, Point.Y);
+                Console.WriteLine('◉');
+
         }
 
         private void ClearBall()
@@ -28,12 +34,31 @@ namespace Pong
             ClearBall();
             if (Direction == "left")
             {
-                Point.Y++;
+                if (Point.Y == 1 || Point.Y == 12)
+                {
+                    K.K *= -1;
+
+                    Point.Y = Point.Y + K.K;
+                    Point.X--;
+                    CheckPadelCollision(padel1);
+                }
+                Point.Y = Point.Y + K.K;
                 Point.X--;
                 CheckPadelCollision(padel1);
+
+
             } else if (Direction == "right")
             {
-                Point.Y++;
+                if (Point.Y == 1 || Point.Y == 12)
+                {
+                    K.K *= -1;
+
+                    Point.Y = Point.Y + K.K;
+                    Point.X++;
+                    CheckPadelCollision(padel2);
+                }
+
+                Point.Y = Point.Y + K.K;
                 Point.X++;
                 CheckPadelCollision(padel2);
             }

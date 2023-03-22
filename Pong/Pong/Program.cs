@@ -11,9 +11,15 @@ var ballStartingPoint = new Point(PlayingField.width/2, PlayingField.height/2);
 var left = new Side(-1);
 var right = new Side(1);
 
+
+var k = new Koef(1);
+
 var Padel1 = new Padel(padel1StartPoint, left);
 var Padel2 = new Padel(padel2StartPoint, right);
-var Ball = new Ball(ballStartingPoint);
+var Ball = new Ball(ballStartingPoint, k);
+
+var random = new Random();
+
 
 Padel1.DrawPadel();
 Padel2.DrawPadel();
@@ -24,7 +30,7 @@ Task.Run(() =>
     while (true)
     {
         Ball.Move(Padel1, Padel2);
-        Thread.Sleep(20);
+        Thread.Sleep(100);
     }
 });
 
