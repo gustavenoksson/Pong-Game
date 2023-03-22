@@ -17,12 +17,11 @@ namespace Pong
 
         public void DrawBall()
         {
-                Console.SetCursorPosition(Point.X, Point.Y);
-                Console.WriteLine('◉');
-
+            Console.SetCursorPosition(Point.X, Point.Y);
+            Console.WriteLine('◉');
         }
 
-        private void ClearBall()
+        public void ClearBall()
         {
             Console.SetCursorPosition(Point.X, Point.Y);
             Console.WriteLine(' ');
@@ -74,8 +73,6 @@ namespace Pong
         {
             if(Point.X < 8)
             {
-                
-                
                 Console.SetCursorPosition(39, 6);
                 Console.Write("player 2 score");
                 return true;
@@ -85,6 +82,14 @@ namespace Pong
                 
                 return false;
             }
+        }
+
+        public void ResetBall()
+        {
+            ClearBall();
+            Point.X = 39;
+            Point.Y = 6;
+            Console.SetCursorPosition(Point.X, Point.Y);
         }
 	}
 }

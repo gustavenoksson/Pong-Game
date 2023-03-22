@@ -15,12 +15,9 @@ var Padel1 = new Padel(padel1StartPoint, left);
 var Padel2 = new Padel(padel2StartPoint, right);
 var Ball = new Ball(ballStartingPoint);
 
-var random = new Random();
-
 Padel1.DrawPadel();
 Padel2.DrawPadel();
 Ball.DrawBall();
-
 
 Task.Run(() =>
 {
@@ -30,7 +27,11 @@ Task.Run(() =>
         Thread.Sleep(100);
         if(Ball.checkForGoal())
         {
-            continue;
+            if (Console.ReadKey(true).Key == ConsoleKey.Enter)
+            {
+                Ball.ResetBall();
+                continue;
+            }
         }
     }
 });
@@ -51,9 +52,5 @@ while (true)
         case ConsoleKey.DownArrow:
             Padel2.MoveDown();
             break;
-    }
-    if (Ball.checkForGoal())
-    {
-        continue;
     }
 }
