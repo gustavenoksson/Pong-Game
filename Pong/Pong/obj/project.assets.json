@@ -8,19 +8,19 @@
     "net7.0": []
   },
   "packageFolders": {
-    "/Users/petterjakobsson/.nuget/packages/": {}
+    "/Users/gurraburra/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/petterjakobsson/Documents/Pong-Game/Pong/Pong/Pong.csproj",
+      "projectUniqueName": "/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/Pong.csproj",
       "projectName": "Pong",
-      "projectPath": "/Users/petterjakobsson/Documents/Pong-Game/Pong/Pong/Pong.csproj",
-      "packagesPath": "/Users/petterjakobsson/.nuget/packages/",
-      "outputPath": "/Users/petterjakobsson/Documents/Pong-Game/Pong/Pong/obj/",
+      "projectPath": "/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/Pong.csproj",
+      "packagesPath": "/Users/gurraburra/.nuget/packages/",
+      "outputPath": "/Users/gurraburra/Desktop/Pong-Game/Pong/Pong/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/petterjakobsson/.nuget/NuGet/NuGet.Config"
+        "/Users/gurraburra/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"

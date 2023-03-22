@@ -11,15 +11,11 @@ var ballStartingPoint = new Point(PlayingField.width/2, PlayingField.height/2);
 var left = new Side(-1);
 var right = new Side(1);
 
-
-var k = new Koef(1);
-
 var Padel1 = new Padel(padel1StartPoint, left);
 var Padel2 = new Padel(padel2StartPoint, right);
-var Ball = new Ball(ballStartingPoint, k);
+var Ball = new Ball(ballStartingPoint);
 
 var random = new Random();
-
 
 Padel1.DrawPadel();
 Padel2.DrawPadel();

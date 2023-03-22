@@ -5,15 +5,14 @@ namespace Pong
 	{
         Point Point;
         string Direction;
-        Koef K;
+        int Angle; 
 
-        public Ball(Point point, Koef k)
+        public Ball(Point point)
 		{
+            var random = new Random();
             Point = point;
             Direction = "left";
-            K = k;
-
-
+            Angle = (int)((0.5 - random.Next(0, 2)) * 2);
         }
 
         public void DrawBall()
@@ -36,13 +35,13 @@ namespace Pong
             {
                 if (Point.Y == 1 || Point.Y == 12)
                 {
-                    K.K *= -1;
+                    Angle *= -1;
 
-                    Point.Y = Point.Y + K.K;
+                    Point.Y = Point.Y + Angle;
                     Point.X--;
                     CheckPadelCollision(padel1);
                 }
-                Point.Y = Point.Y + K.K;
+                Point.Y = Point.Y + Angle;
                 Point.X--;
                 CheckPadelCollision(padel1);
 
@@ -51,14 +50,14 @@ namespace Pong
             {
                 if (Point.Y == 1 || Point.Y == 12)
                 {
-                    K.K *= -1;
+                    Angle *= -1;
 
-                    Point.Y = Point.Y + K.K;
+                    Point.Y = Point.Y + Angle;
                     Point.X++;
                     CheckPadelCollision(padel2);
                 }
 
-                Point.Y = Point.Y + K.K;
+                Point.Y = Point.Y + Angle;
                 Point.X++;
                 CheckPadelCollision(padel2);
             }
