@@ -1,31 +1,28 @@
 ﻿<Properties StartupConfiguration="{F6E753EA-10E2-4F9C-B080-9D57C6309246}|Default">
-  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ball.cs">
+  <MonoDevelop.Ide.ItemProperties.Pong PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Program.cs">
     <Files>
-      <File FileName="Ball.cs" Line="21" Column="1" />
-      <File FileName="PlayingField.cs" />
-      <File FileName="Padel.cs" />
-      <File FileName="Point.cs" />
-      <File FileName="Side.cs" />
-      <File FileName="Program.cs" />
-      <File FileName="Koef.cs" />
+      <File FileName="PlayingField.cs" Line="14" Column="4" />
+      <File FileName="Padel.cs" Line="26" Column="29" />
+      <File FileName="Point.cs" Line="1" Column="1" />
+      <File FileName="Side.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="60" Column="2" />
+      <File FileName="Ball.cs" Line="85" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Pong" expanded="True">
-            <Node name="Pong" expanded="True">
-              <Node name="Ball.cs" selected="True" />
-            </Node>
+            <Node name="Pong" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Pong PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

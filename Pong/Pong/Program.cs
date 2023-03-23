@@ -30,6 +30,10 @@ Task.Run(() =>
             if (Console.ReadKey(true).Key == ConsoleKey.Enter)
             {
                 Ball.ResetBall();
+                Console.SetCursorPosition(39, 6);
+                Console.Write("                           ");
+                Console.SetCursorPosition(34, 7);
+                Console.Write("                            ");
                 continue;
             }
         }

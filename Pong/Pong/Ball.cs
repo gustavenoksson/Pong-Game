@@ -71,17 +71,29 @@ namespace Pong
 
         public bool checkForGoal()
         {
-            if(Point.X < 8)
+            if (Point.X < 7)
             {
+
+
                 Console.SetCursorPosition(39, 6);
                 Console.Write("player 2 score");
+                Console.SetCursorPosition(34, 7);
+                Console.Write("Press enter to play again");
                 return true;
             }
-            else
+            else if (Point.X > 83)
             {
-                
+                Console.SetCursorPosition(39, 6);
+                Console.Write("player 1 score");
+                Console.SetCursorPosition(34, 7);
+                Console.Write("Press enter to play again");
+                return true;
+
+            }
+            else {
                 return false;
             }
+
         }
 
         public void ResetBall()
