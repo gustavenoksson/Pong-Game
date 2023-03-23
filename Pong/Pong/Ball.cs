@@ -115,9 +115,16 @@ namespace Pong
 
         public bool CheckIfGG()
         {
-            if(PlayerOneScore == 3 || PlayerTwoScore == 3)
+            if(PlayerTwoScore == 3)
             {
-                 
+                Console.SetCursorPosition(34, 5);
+                Console.Write("Player 2 has won the game!");
+                return true;
+            }
+            else if(PlayerOneScore == 3)
+            {
+                Console.SetCursorPosition(34, 5);
+                Console.Write("Player 1 has won the game!");
                 return true;
             }
             return false;
