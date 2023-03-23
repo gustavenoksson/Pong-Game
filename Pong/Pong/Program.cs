@@ -27,13 +27,26 @@ Task.Run(() =>
         Thread.Sleep(100);
         if(Ball.checkForGoal())
         {
-            if (Console.ReadKey(true).Key == ConsoleKey.Enter)
+            if (Ball.CheckIfGG())
+            {
+                for(var i = 9; i < PlayingField.width -9; i++)
+                {
+                    Console.SetCursorPosition(i, 7);
+                    Console.WriteLine(" ");
+                }
+                Console.SetCursorPosition(42, 7);
+                
+                Console.WriteLine("GAME OVER");
+                break;
+            }
+
+
+            else if (Console.ReadKey(true).Key == ConsoleKey.Enter)
             {
                 Ball.ResetBall();
-                Console.SetCursorPosition(39, 6);
-                Console.Write("                           ");
-                Console.SetCursorPosition(34, 7);
-                Console.Write("                            ");
+
+                PlayingField.ClearText();
+
                 continue;
             }
         }

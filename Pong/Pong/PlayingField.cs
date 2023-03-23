@@ -33,5 +33,18 @@ namespace Pong
                 Console.WriteLine('*');
             }
 		}
+
+		public void ClearText()
+		{
+            for (var i = 9; i < width - 9; i++)
+            {
+                Console.SetCursorPosition(i, 5);
+                Console.WriteLine(" ");
+                Console.SetCursorPosition(i, 6);
+                Console.WriteLine(" ");
+                Console.SetCursorPosition(i, 7);
+                Console.WriteLine(" ");
+            }
+        }
 	}
 }

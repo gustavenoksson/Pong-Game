@@ -5,7 +5,9 @@ namespace Pong
 	{
         Point Point;
         string Direction;
-        int Angle; 
+        int Angle;
+        int PlayerOneScore;
+        int PlayerTwoScore;
 
         public Ball(Point point)
 		{
@@ -13,6 +15,8 @@ namespace Pong
             Point = point;
             Direction = "left";
             Angle = (int)((0.5 - random.Next(0, 2)) * 2);
+            PlayerOneScore = 0;
+            PlayerTwoScore = 0;
         }
 
         public void DrawBall()
@@ -73,18 +77,23 @@ namespace Pong
         {
             if (Point.X < 7)
             {
+                PlayerTwoScore += 1;
 
-
-                Console.SetCursorPosition(39, 6);
-                Console.Write("player 2 score");
+                Console.SetCursorPosition(39, 5);
+                Console.Write("Player 2 scored!");
+                Console.SetCursorPosition(44, 6);
+                Console.WriteLine(PlayerOneScore + " - " + PlayerTwoScore);
                 Console.SetCursorPosition(34, 7);
                 Console.Write("Press enter to play again");
                 return true;
             }
             else if (Point.X > 83)
             {
-                Console.SetCursorPosition(39, 6);
-                Console.Write("player 1 score");
+                PlayerOneScore += 1;
+                Console.SetCursorPosition(39, 5);
+                Console.Write("Player 1 scored!");
+                Console.SetCursorPosition(44, 6);
+                Console.WriteLine(PlayerOneScore + " - " + PlayerTwoScore);
                 Console.SetCursorPosition(34, 7);
                 Console.Write("Press enter to play again");
                 return true;
@@ -102,6 +111,16 @@ namespace Pong
             Point.X = 39;
             Point.Y = 6;
             Console.SetCursorPosition(Point.X, Point.Y);
+        }
+
+        public bool CheckIfGG()
+        {
+            if(PlayerOneScore == 3 || PlayerTwoScore == 3)
+            {
+                 
+                return true;
+            }
+            return false;
         }
 	}
 }
